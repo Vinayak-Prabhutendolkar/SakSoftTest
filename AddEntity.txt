@@ -1,0 +1,69 @@
+API: /addEntity
+
+URL: http://localhost:3000/person/addEntity
+
+Request:
+
+{
+	"SakSoftRequest": {
+
+		"Header": {
+			"CorrelationId": "2123"
+			
+
+		},
+		"Individual": {
+			"personInformation": [{
+                "FirstName": "Vinayak",
+                "LastName": "Prabhu",
+                "Email": "Megha@luv2code.com",
+                "Age": "23"
+			}]
+		}
+	}
+}
+
+Success Response:
+
+{
+    "SakSoftResponse": {
+        "Header": {
+            "CorrelationId": "2123"
+        },
+        "Individual": {
+            "personInformation": [
+                {
+                    "Id": 10,
+                    "FirstName": "Vinayak",
+                    "LastName": "Prabhu",
+                    "Email": "Megha@luv2code.com",
+                    "Age": 23
+                }
+            ]
+        },
+        "Response": {
+            "Status": "SUCCESS",
+            "ErrorMsg": "Entity Addded successfully"
+        }
+    }
+}
+
+Failed Response:
+
+{
+    "SakSoftResponse": {
+        "Response": {
+            "Status": "FAILED",
+            "ErrorMsg": "Invalid parameter: Id"
+        }
+    }
+}
+
+{
+    "SakSoftResponse": {
+        "Response": {
+            "Status": "FAILED",
+            "ErrorMsg": "Mentioned parameters cannot be empty : First Name,Last Name"
+        }
+    }
+}

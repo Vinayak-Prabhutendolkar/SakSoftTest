@@ -1,0 +1,62 @@
+API: /updateEntity
+
+URL: http://localhost:3000/person/updateEntity
+
+Request:
+
+{
+	"SakSoftRequest": {
+
+		"Header": {
+			"CorrelationId": "2123"
+			
+
+		},
+		"Individual": {
+			"personInformation": [{
+                "Id": 4,
+                "FirstName": "Vinayak",
+                "LastName": "Prabhu",
+                "Email": "Megha@luv2code.com",
+                "Age": "23"
+			}]
+		}
+	}
+}
+
+Success Response:
+
+{
+    "SakSoftResponse": {
+        "Header": {
+            "CorrelationId": "2123"
+        },
+        "Individual": {
+            "personInformation": [
+                {
+                    "Id": 4,
+                    "FirstName": "Vinayak",
+                    "LastName": "Prabhu",
+                    "Email": "Megha@luv2code.com",
+                    "Age": 23
+                }
+            ]
+        },
+        "Response": {
+            "Status": "SUCCESS",
+            "ErrorMsg": "Entity updated successfully"
+        }
+    }
+}
+
+Failed Response:
+
+{
+    "SakSoftResponse": {
+        "Response": {
+            "Status": "FAILED",
+            "ErrorMsg": "Id cannot be blank"
+        }
+    }
+}
+

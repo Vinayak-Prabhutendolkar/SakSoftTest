@@ -1,0 +1,67 @@
+API: /getEntityById
+
+URL: http://localhost:3000/person/getEntityById
+
+Request:
+{
+	"SakSoftRequest": {
+
+		"Header": {
+			"CorrelationId": "2123"
+			
+
+		},
+		"Individual": {
+			"personInformation": [{
+                "Id": "4"
+			}]
+		}
+	}
+}
+
+Success Response:
+
+{
+    "SakSoftResponse": {
+        "Header": {
+            "CorrelationId": "2123"
+        },
+        "Individual": {
+            "personInformation": [
+                {
+                    "Id": 4,
+                    "FirstName": "Abhishek",
+                    "LastName": "Raj",
+                    "Email": "abhi.raj@softsol.com",
+                    "Age": 30
+                }
+            ]
+        },
+        "Response": {
+            "Status": "SUCCESS",
+            "ErrorMsg": "Data fetch successfully"
+        }
+    }
+}
+
+
+Failed Response:
+
+
+{
+    "SakSoftResponse": {
+        "Response": {
+            "Status": "FAILED",
+            "ErrorMsg": "Id cannot be blank"
+        }
+    }
+}
+
+{
+    "SakSoftResponse": {
+        "Response": {
+            "Status": "SUCCESS",
+            "ErrorMsg": "No record found"
+        }
+    }
+}

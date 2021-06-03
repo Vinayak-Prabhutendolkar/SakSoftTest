@@ -1,0 +1,72 @@
+API: /getAll
+
+URL: http://localhost:3000/person/getAll
+
+Request: 
+
+{
+	"SakSoftRequest": {
+		"Header": {
+			"CorrelationId": "2123"
+		}
+	}
+}
+
+SUCCESS Response: 
+
+{
+    "SakSoftResponse": {
+        "Header": {
+            "CorrelationId": "2123"
+        },
+        "Individual": {
+            "personInformation": [
+                {
+                    "Id": 1,
+                    "FirstName": "Raj",
+                    "LastName": "Verma",
+                    "Email": "raj.verma@imagine.com",
+                    "Age": 35
+                },
+                {
+                    "Id": 2,
+                    "FirstName": "Vaibhav",
+                    "LastName": "Telang",
+                    "Email": "v.telang@futureready.com",
+                    "Age": 29
+                },
+                {
+                    "Id": 3,
+                    "FirstName": "Ketan",
+                    "LastName": "Bahadur",
+                    "Email": "k.bahadur@infonext.com",
+                    "Age": 32
+                },
+                {
+                    "Id": 4,
+                    "FirstName": "Abhishek",
+                    "LastName": "Raj",
+                    "Email": "abhi.raj@softsol.com",
+                    "Age": 30
+                }
+            ]
+        },
+        "Response": {
+            "Status": "SUCCESS",
+            "ErrorMsg": "Data fetch successfully"
+        }
+    }
+}
+
+FAILED Response:
+{
+    "SakSoftResponse": {
+        "Header": {
+            "CorrelationId": "2123"
+        }
+        "Response": {
+            "Status": "SUCCESS",
+            "ErrorMsg": "No Records Found"
+        }
+    }
+}

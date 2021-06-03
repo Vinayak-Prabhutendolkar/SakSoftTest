@@ -1,0 +1,57 @@
+API: /deleteEntity
+
+URL: http://localhost:3000/person/deleteEntity
+
+Request:
+
+{
+	"SakSoftRequest": {
+
+		"Header": {
+			"CorrelationId": "2123"
+		},
+		"Individual": {
+			"personInformation": [{
+                "Id": 4          
+			}]
+		}
+	}
+}
+
+Success Response: 
+
+{
+    "SakSoftResponse": {
+        "Header": {
+            "CorrelationId": "2123"
+        },
+        "Individual": {
+            "personInformation": []
+        },
+        "Response": {
+            "Status": "SUCCESS",
+            "ErrorMsg": "Entity deleted successfully"
+        }
+    }
+}
+
+FAILED Response:
+
+{
+    "SakSoftResponse": {
+        "Response": {
+            "Status": "FAILED",
+            "ErrorMsg": "Id cannot be blank"
+        }
+    }
+}
+
+{
+    "SakSoftResponse": {
+        "Response": {
+            "Status": "SUCCESS",
+            "ErrorMsg": "No record found"
+        }
+    }
+}
+
