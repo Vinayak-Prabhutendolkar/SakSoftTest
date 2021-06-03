@@ -9,15 +9,13 @@ Request:
 
 		"Header": {
 			"CorrelationId": "2123"
-			
-
 		},
 		"Individual": {
 			"personInformation": [{
-                "FirstName": "Vinayak",
-                "LastName": "Prabhu",
-                "Email": "Megha@luv2code.com",
-                "Age": "23"
+               				 "FirstName": "Vinayak",
+               				 "LastName": "Prabhu",
+                			 "Email": "Megha@luv2code.com",
+                			 "Age": "23"
 			}]
 		}
 	}
